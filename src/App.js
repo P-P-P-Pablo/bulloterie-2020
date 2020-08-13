@@ -4,6 +4,7 @@ import AsideLeft from "./components/AsideLeft";
 import AsideRight from "./components/AsideRight";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import ComponentTester from "./components/ComponentTester";
 
 function App() {
 	return (
@@ -11,7 +12,10 @@ function App() {
 			<GridLayout>
 				<Header>header</Header>
 				<AsideLeft>aside-left</AsideLeft>
-				<Main>main</Main>
+				<Main>
+					main
+					<ComponentTester />
+				</Main>
 				<AsideRight>aside-right</AsideRight>
 			</GridLayout>
 		</div>
