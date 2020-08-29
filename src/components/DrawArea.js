@@ -2,6 +2,8 @@ import React, { useState, useEffect, prevState, refs } from "react";
 import Immutable from "immutable";
 import "./DrawArea.css";
 
+// solution to the problem here : https://reactjs.org/docs/refs-and-the-dom.html#creating-refs
+
 // this handle states
 const DrawArea = () => {
   //STATE
@@ -41,9 +43,7 @@ const DrawArea = () => {
     const point = relativeCoordinatesForEvent(mouseEvent);
 
     setLines(
-      prevState.lines.updateIn([lines.size - 1], (line) =>
-        line.push(point)
-      )
+      prevState.lines.updateIn([lines.size - 1], (line) => line.push(point))
     );
   };
 
